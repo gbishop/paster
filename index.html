@@ -1,0 +1,16 @@
+<!doctype html>
+<html ng-app="MyPasterModule">
+<head>
+    <title>Paster: Generate a bookmarklet to paste some text.</title>
+    <script src="http://code.angularjs.org/1.2.0-rc.2/angular.min.js"></script>
+    <script src="paster.js"></script>
+</head>
+<body>
+    <div ng-controller="PasterControl">
+        Put the text you want inserted here.</br>
+        <textarea ng-model="text" cols="80" rows="6"></textarea>
+        <hr/>
+        Then drag this <a href="{{text|pastify}}">Bookmarklet</a> to your bookmark bar or right-click, copy the link address, and use it as a "Search Engine" in Chrome.
+    </div>
+</body>
+</html>
